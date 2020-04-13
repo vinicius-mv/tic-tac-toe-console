@@ -34,7 +34,7 @@ namespace TicTacToe
 
             if (winner == Piece.Player.Noone)
             {
-                Console.WriteLine("DRAWNN");
+                Console.WriteLine("Game Over - Result: DRAW.");
             }
             else
             {
@@ -68,7 +68,7 @@ namespace TicTacToe
 
         public bool checkGameOver()
         {
-            return (LineGameOverCheck() || ColumnGameOverCheck() || MajorDiagonalGameOver() || MinorDiagonalGameOver());
+            return (LineGameOverCheck() || ColumnGameOverCheck() || MajorDiagonalGameOver() || MinorDiagonalGameOver() || DrawGameOver());
         }
 
         private bool LineGameOverCheck()
@@ -165,7 +165,7 @@ namespace TicTacToe
             return false;
         }
 
-        private bool DrawnGameOver()
+        private bool DrawGameOver()
         {
             for (int i = 0; i < 3; i++)
             {
