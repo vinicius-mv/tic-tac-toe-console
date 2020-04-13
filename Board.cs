@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     internal class Board
     {
-        //private Piece[,] pieces = new Piece[3, 3];
+
         public Piece[,] pieces;
 
         public Board()

@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     internal class Piece
     {
-        public Player Owner { get; set; }
+        public Player Owner { get; private set; }
 
         public Piece(Player player)
         {
@@ -25,7 +25,7 @@ namespace TicTacToe
                     return "O";
 
                 default:
-                    throw new Exception("INVALID");
+                    throw new Exception("Invalid Player.");
             }
         }
 

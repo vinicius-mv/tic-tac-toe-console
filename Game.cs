@@ -4,7 +4,7 @@ namespace TicTacToe
 {
     internal class Game
     {
-        private Board board { get; set; }
+        private Board board;
         private Piece.Player owner = Piece.Player.Cross;
         private Piece.Player winner;
 
@@ -68,7 +68,6 @@ namespace TicTacToe
 
         public bool checkGameOver()
         {
-            bool gameOver = false;
             return (LineGameOverCheck() || ColumnGameOverCheck() || MajorDiagonalGameOver() || MinorDiagonalGameOver());
         }
 
